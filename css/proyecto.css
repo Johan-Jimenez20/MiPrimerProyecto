@@ -1,0 +1,589 @@
+header {
+    background-color: hsl(220, 100%, 60%);
+    color: #FFFFFF;
+    padding-top: 2px;
+    border: solid black;
+    margin: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    background-color: rgb(247, 243, 243);
+    padding: 15px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+label {
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 3px;
+}
+
+input {
+    outline: none;
+    border-radius: 5px;
+    border: solid rgb(92, 86, 86);
+    width: 370px;
+    height: 30px;
+}
+
+.input2 {
+    width: 40px;
+    background-color: #f09f69;
+}
+
+.input3 {
+    width: 320px;
+}
+
+p {
+    margin: 4px;
+}
+
+.btn {
+    border-radius: 15px;
+    width: 90px;
+    height: 40px;
+    background-color: #f09f69;
+}
+.btn:hover {
+    background-color: #efb994;
+}
+
+.img1 {
+    width: 90px;
+    padding: 10px;
+    border-radius: 60px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn1 {
+    width: 200px;
+    height: 50px;
+    border: solid black;
+    background-color:hsl(220, 100%, 60%);
+    border-radius: 20px;
+    font-size: 20px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 1050px;
+    top: 400px;
+}
+
+.btn1:hover{
+    background-color: #2661d6;
+}
+
+.img2 {
+    width: 200px;
+    position: absolute;
+    left: 1050px;
+    top: 200px;
+}
+
+.check {
+    width: 15px;
+    position: absolute;
+    left: 1000px;
+    top: 460px;
+}
+
+.terms {
+    font-size: 15px;
+    position: absolute;
+    left: 1040px;
+    top: 460px;
+}
+
+footer {
+    background-color: hsl(220, 100%, 60%);
+    color: #FFFFFF;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.divfooter {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+.mapa {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 180px;
+    height: 25px;
+    text-align: center;
+    background-color:#f09f69;
+    border-radius: 15px;
+    border: solid black;   
+}
+
+a {
+    color: #FFFFFF;
+}
+
+/* Extras pantalla 2 */
+
+.form1 {
+    height: 370px;
+}
+
+.label2 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 25px;
+    display: flex;
+}
+
+.inputp2 {
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn2 {
+    margin-left: 110px;
+    margin-top: 40px;
+    width: 180px;
+    height: 50px;
+    border: solid black;
+    background-color:hsl(220, 100%, 60%);
+    border-radius: 20px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.btn2:hover {
+    background-color: #2661d6;
+}
+
+/* Extras pantalla 3*/
+
+.hp3 {
+    position: fixed;
+    width: 200px;
+    height: 97%;
+    border: solid black;
+    background-color: hsl(220, 100%, 60%);
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF
+}
+
+.img3 {
+    width: 100px;
+    border-radius: 70px;
+    position: absolute;
+    left: 60px;
+    bottom: 90px;
+}
+
+.proyecto3 {
+    position: absolute;
+    left: 60px;
+    top: 100px;
+}
+
+.registro3 {
+    position: absolute;
+    left: 15px;
+    top: 250px;
+}
+
+.form2 {
+    height: 392px;
+    width: 385px;
+}
+
+.title1 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.btn3 {
+    background-color:#f09f69;
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.btn3:hover {
+    background-color: #efb994;
+}
+
+textarea {
+    width: 370px;
+    height: 80px;
+    border: solid rgb(92, 86, 86);
+    border-radius: 5px;
+}
+
+.inputp3 {
+    width: 270px;
+}
+
+.centrar {
+    margin: 25px;
+    display: flex;
+    justify-content: right;
+}
+
+.btn4 {
+    width: 150px;
+    height: 35px;
+    background-color: hsl(220, 100%, 60%);
+    color: #FFFFFF;
+    border: solid rgb(92, 86, 86);
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.btn4:hover {
+    background-color: #2661d6;
+    color: black;
+}
+
+/* Extras pantalla 4 */
+
+.hp4 {
+    position:absolute;
+    width: 200px;
+    height: 700px;
+    right: 02px;
+    border: solid black;
+    background-color: hsl(220, 100%, 60%);
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF
+}
+
+.img4 {
+    width: 120px;
+    position: absolute;
+    left: 40px;
+    top: 120px;
+}
+
+.pagop4 {
+    position: absolute;
+    left: 20px;
+    bottom: 250px;
+}
+
+.form3 {
+    height: 450px;
+}
+
+.btn6 {
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    background-color: #f09f69;
+    border-radius: 30px;
+}
+
+.btn6:hover {
+    background-color: #efb994;
+}
+
+.otros1 {
+    color: #4c4e52;
+    text-align: justify;
+}
+
+.btn7 {
+    width: 60px;
+    height: 35px;
+    margin-top: 10px;
+    background-color:#75777a;
+    border-radius: 30px;
+}
+
+.btn7:hover{
+    background-color: #92969e;
+}
+
+.centrar1 {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn5 {
+    width: 150px;
+    height: 35px;
+    background-color: hsl(220, 100%, 60%);
+    color: #FFFFFF;
+    border: solid rgb(92, 86, 86);
+    border-radius: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn5:hover {
+    background-color: #2661d6;
+    color: black;
+}
+
+.btn8 {
+    width: 60px;
+    height: 35px;
+    margin-top: 10px;
+    background-color:#da6d25;
+    border-radius: 30px;
+}
+
+.btn8:hover{
+    background-color: #f09f69;
+}
+
+.inputp4 {
+    width: 60px;
+    border-radius: 30px;
+    background-color: #da6d25;
+}
+
+/* Extras pantalla 5 */
+
+.hp5 {
+    position:absolute;
+    width: 200px;
+    height: 775px;
+    right: 02px;
+    border: solid black;
+    background-color: hsl(220, 100%, 60%);
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF
+}
+
+.img5 {
+    width: 120px;
+    position: absolute;
+    left: 40px;
+    bottom: 240px;
+}
+
+.pagop5 {
+    position: absolute;
+    left: 10px;
+    top: 200px;
+}
+
+.h5 {
+    text-align: center;
+}
+
+.btn9 {
+    width: 60px;
+    height: 30px;
+    margin: 0 auto;
+    margin-left: 2px;
+    background-color:#f09f69;
+    border-radius: 30px;
+}
+
+.btn9:hover, .btn10:hover, .btn11:hover{
+    background-color: #efb994;
+    color: white;
+}
+
+.btn10 {
+    width: 65px;
+    height: 30px;
+    margin-left: 2px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    background-color:#da6d25;
+    border-radius: 10px;
+}
+
+.labelp5 {
+    font-size: 11px;
+}
+
+.label2p5 {
+    font-size: 15px;
+}
+
+.label3p5 {
+    font-weight: bold;
+}
+
+.img6 {
+    width: 55px;
+    height: 35px;
+    border-radius: 25px;
+}
+
+.btn11 {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    background-color: #f09f69;
+}
+
+.inputp5 {
+    width: 190px;
+    height: 20px;
+    position: absolute;
+    right: 530px;
+}
+
+.input2p5 {
+    width: 100px;
+    height: 18px;
+    position: absolute;
+    right: 620px;
+}
+
+/* Extras pantalla 6 */
+
+.headerp6 {
+    margin: 40px;
+}
+
+.h2p6 {
+    font-size: 20px;
+}
+
+.inputp6 {
+    width: 180px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.btn12 {
+    width: 70px;
+    border-radius: 20px;   
+    background-color: lightgreen;
+}
+
+.btn12:hover {
+    background-color: #04d619;
+}
+
+.p6 {
+    display: flex;
+    justify-content: left;
+}
+
+.labelp6 {
+    font-size: 12px;
+    position: absolute;
+    left: 600px;
+    top: 230px
+}
+
+.input2p6 {
+    width: 160px;
+    height: 20px;
+    margin-left: 3px;
+}
+
+.input3p6 {
+    width: 40px;
+    height: 20px;
+    background-color: #f09f69;
+}
+
+.label2p6 {
+    font-size: 19px;   
+}
+
+.input4p6 {
+    width: 180px;
+    height: 20px;
+}
+
+.pcentrar {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.input5p6 {
+    margin: 0 10px 0 5px;
+    width: 150px;
+}
+
+.linkregistro {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    padding-top: 10px;
+}
+
+
+/* Diseño responsive */
+
+@media (max-width: 750px){
+    header {
+        width: 98%;
+        font-size: 12px;
+    } 
+    form {
+        width: 385px; 
+        margin-bottom: 100px;   
+    }
+    label {
+        font-size: 16px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    input{
+        height: 24px;
+    }
+    .btn1 {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        left: 120px;
+        top: 575px;
+    }
+    .img2{
+        width: 100px;
+        position: absolute;
+        left: 330px;
+        top: 575px;
+    }
+
+    .check{
+        width: 15px;
+        position: absolute;
+        left: 50px;
+        top: 630px;
+    }
+    .terms{
+        width: 250px;
+        font-size: 15px;
+        position: absolute;
+        left: 80px;
+        top: 630px;
+    }
+    .divfooter {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
+
