@@ -1,5 +1,5 @@
 header {
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     color: #FFFFFF;
     padding-top: 2px;
     border: solid black;
@@ -24,6 +24,10 @@ label {
     font-size: 20px;
 }
 
+.nombre {
+    width: 180px;
+}
+
 h2 {
     text-align: center;
     margin: 3px;
@@ -39,7 +43,7 @@ input {
 
 .input2 {
     width: 40px;
-    background-color: #f09f69;
+    background-color: #C7DCDD;
 }
 
 .input3 {
@@ -50,14 +54,30 @@ p {
     margin: 4px;
 }
 
-.btn {
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn1File {
+    padding-top: 10px;
     border-radius: 15px;
     width: 90px;
     height: 40px;
-    background-color: #f09f69;
+    background-color: #C7DCDD;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
 }
-.btn:hover {
-    background-color: #efb994;
+
+.btnFile {
+    display: none;
+}
+
+.btn1File:hover {
+    background-color: #6A9A9E;
+    color: white;
 }
 
 .img1 {
@@ -66,17 +86,13 @@ p {
     border-radius: 60px;
 }
 
-.perfil {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .btn1 {
     width: 200px;
     height: 50px;
     border: solid black;
-    background-color:hsl(220, 100%, 60%);
+    background-color:#325C6C;
     border-radius: 20px;
     font-size: 20px;
     color: #FFFFFF;
@@ -86,7 +102,8 @@ p {
 }
 
 .btn1:hover{
-    background-color: #2661d6;
+    background-color: #9BC6BF;
+    color: black;
 }
 
 .img2 {
@@ -111,7 +128,7 @@ p {
 }
 
 footer {
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     color: #FFFFFF;
     border: solid black;
     display: flex;
@@ -130,7 +147,7 @@ footer {
     width: 180px;
     height: 25px;
     text-align: center;
-    background-color:#f09f69;
+    background-color: #C7DCDD;
     border-radius: 15px;
     border: solid black;   
 }
@@ -160,18 +177,19 @@ a {
 
 .btn2 {
     margin-left: 110px;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 180px;
     height: 50px;
     border: solid black;
-    background-color:hsl(220, 100%, 60%);
+    background-color:#325C6C;
     border-radius: 20px;
     font-size: 20px;
     color: #FFFFFF;
 }
 
 .btn2:hover {
-    background-color: #2661d6;
+    background-color: #9BC6BF;
+    color: black;
 }
 
 /* Extras pantalla 3*/
@@ -181,7 +199,7 @@ a {
     width: 200px;
     height: 97%;
     border: solid black;
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     justify-content: center;
     align-items: center;
     color: #FFFFFF
@@ -218,14 +236,16 @@ a {
 }
 
 .btn3 {
-    background-color:#f09f69;
+    background-color: #6A9A9E;
     width: 150px;
     height: 30px;
     border-radius: 30px;
+    color: white;
 }
 
 .btn3:hover {
-    background-color: #efb994;
+    background-color: #C7DCDD;
+    color: black;
 }
 
 textarea {
@@ -248,7 +268,7 @@ textarea {
 .btn4 {
     width: 150px;
     height: 35px;
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     color: #FFFFFF;
     border: solid rgb(92, 86, 86);
     border-radius: 30px;
@@ -256,7 +276,7 @@ textarea {
 }
 
 .btn4:hover {
-    background-color: #2661d6;
+    background-color: #6A9A9E;
     color: black;
 }
 
@@ -268,7 +288,7 @@ textarea {
     height: 700px;
     right: 02px;
     border: solid black;
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     justify-content: center;
     align-items: center;
     color: #FFFFFF
@@ -295,12 +315,12 @@ textarea {
     width: 60px;
     height: 30px;
     margin: 10px;
-    background-color: #f09f69;
+    background-color: #9BC6BF;
     border-radius: 30px;
 }
 
 .btn6:hover {
-    background-color: #efb994;
+    background-color: #C7DCDD;
 }
 
 .otros1 {
@@ -312,12 +332,8 @@ textarea {
     width: 60px;
     height: 35px;
     margin-top: 10px;
-    background-color:#75777a;
+    background-color: #325C6C;
     border-radius: 30px;
-}
-
-.btn7:hover{
-    background-color: #92969e;
 }
 
 .centrar1 {
@@ -329,7 +345,7 @@ textarea {
 .btn5 {
     width: 150px;
     height: 35px;
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     color: #FFFFFF;
     border: solid rgb(92, 86, 86);
     border-radius: 30px;
@@ -338,7 +354,7 @@ textarea {
 }
 
 .btn5:hover {
-    background-color: #2661d6;
+    background-color: #6A9A9E;
     color: black;
 }
 
@@ -346,18 +362,18 @@ textarea {
     width: 60px;
     height: 35px;
     margin-top: 10px;
-    background-color:#da6d25;
+    background-color: #6A9A9E;
     border-radius: 30px;
 }
 
 .btn8:hover{
-    background-color: #f09f69;
+    background-color: #9BC6BF;
 }
 
 .inputp4 {
     width: 60px;
     border-radius: 30px;
-    background-color: #da6d25;
+    background-color: #C7DCDD;
 }
 
 /* Extras pantalla 5 */
@@ -368,7 +384,7 @@ textarea {
     height: 775px;
     right: 02px;
     border: solid black;
-    background-color: hsl(220, 100%, 60%);
+    background-color: #325C6C;
     justify-content: center;
     align-items: center;
     color: #FFFFFF
@@ -396,13 +412,12 @@ textarea {
     height: 30px;
     margin: 0 auto;
     margin-left: 2px;
-    background-color:#f09f69;
+    background-color: #9BC6BF;
     border-radius: 30px;
 }
 
 .btn9:hover, .btn10:hover, .btn11:hover{
-    background-color: #efb994;
-    color: white;
+    background-color: #C7DCDD;
 }
 
 .btn10 {
@@ -411,7 +426,7 @@ textarea {
     margin-left: 2px;
     margin-bottom: 8px;
     font-weight: bold;
-    background-color:#da6d25;
+    background-color:#6A9A9E;
     border-radius: 10px;
 }
 
@@ -437,7 +452,7 @@ textarea {
     margin-right: 5px;
     margin-bottom: 5px;
     border-radius: 25px;
-    background-color: #f09f69;
+    background-color: #9BC6BF;
 }
 
 .inputp5 {
@@ -501,7 +516,7 @@ textarea {
 .input3p6 {
     width: 40px;
     height: 20px;
-    background-color: #f09f69;
+    background-color: #9BC6BF;
 }
 
 .label2p6 {
@@ -531,6 +546,301 @@ textarea {
     color: black;
     padding-top: 10px;
 }
+
+/* index */
+
+.imgIndex {
+    width: 35px;
+    height: 30px;
+}
+
+.btn15 {
+    padding-right: 130px;
+    background-color: #325C6C;
+    border-style:hidden;
+}
+
+.dropdown {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+.ul1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+    background: #325C6C;
+}   
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li .aIndex {
+    display: block;
+    padding: 30px 25px;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+ul li .aIndex:hover {
+    background-color: #325C6C;
+    color: #FFFFFF;
+}
+
+ul li .dropdown {
+    width: 100%;
+    background-color: #325C6C;
+    position: absolute;
+    display: none;
+}
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+.headerIndex {
+   align-items: center;
+   display: flex; 
+}
+
+.divIndex {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 330px;
+}
+
+.imgIndex2 {
+    width: 20px;
+    height: 30px;
+    border-style: hidden;
+}
+
+.btn16 {
+    width: 30px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.divIndex2 {
+    padding-left: 250px;
+}
+
+.aIndex2 {
+    margin: 10px;
+}
+
+.divIndex3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 10px;
+}
+
+.h2Index {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.imgIndex3 {
+    width: 150px;
+    height: 170px;
+    border:solid 2px;
+    margin: 10px 10px 0px 10px;
+}
+
+.divIndex4 {
+    margin: 5px;
+    border-radius: 5px;
+    width: 215px;
+    background-color: #6A9A9E;
+    border: solid;
+    border-color: #325C6C;
+}
+
+.pIndex {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pIndex2 {
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4c4e52;
+}
+
+.btn17 {
+    margin: 5px;
+    margin-left:130px;
+    background-color:#325C6C;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.btn17:hover {
+    background-color: #6a9a9e;
+    color: black;
+}
+
+/* Adicionales pantalla 7 */
+
+.imgp7 {
+    width: 450px;
+}
+
+.formp7 {
+    width: 900px;
+    margin-top: 30px;
+}
+
+.divp7 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.desP7 {
+    margin: 15px;
+    margin-top: 40px;
+}
+
+.pp7 {
+    font-size: 20px;
+    color: rgb(62,61,61);
+    font-weight: bold;
+}
+
+.pDesP7 {
+    margin-bottom: 20px;
+}
+
+.inputP7 {
+    width: 50px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;       
+}
+
+.btn19 {
+    margin: 15px 5px  10px 0px;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #325C6C;
+    color: white;
+}
+
+.btn18 {
+    margin-bottom: 5px;
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #325C6C;
+    color: white;
+}
+
+.btn19:hover {
+    color: black;
+    background-color: #6a9a9e;
+}
+
+.btn18:hover {
+    background-color: #6a9a9e;
+    color: black;
+}
+
+.aP7 {
+    text-decoration: none;
+}
+
+
+/* Adicionales Pantalla 8  */
+
+.btn20 {
+    margin-left: 8px;
+    width: 100px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn20:hover {
+    background-color: #4c4e52;
+    color: black;
+}
+
+.divMainP8 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.formP8{
+    margin-top: 50px;
+    width: 800px;
+    height: 300px;
+    padding: 0px;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+}
+
+.divImg {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 50px;
+}
+
+.imgP8 {
+    width: 100px;
+    margin: 5px;
+}
+
+.tituloP8 {
+    text-align: left;
+    font-size: 25px;
+}
+
+.labelP8 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.label2P8 {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 20px;  
+}
+
+.pNumero {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.btn21 {
+    margin-top: 10px;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    background-color:#325C6C;
+    color: white;
+}
+
 
 
 /* Diseño responsive */
@@ -584,6 +894,7 @@ textarea {
         font-size: 12px;
         padding: 4px;
     }
+    
 }
 
 

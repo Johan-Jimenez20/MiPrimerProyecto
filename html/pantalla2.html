@@ -7,25 +7,19 @@
     <title>Mi primer proyecto</title>
 </head>
 <body>
-<div class="hp3" >
-    <h3 class="proyecto3" >My proyect</h3>
-    <h1 class="registro3" > Registro artículo </h1>
-    <img class="img3" src="/Imagenes/imagen3.png" alt="">
-</div>
-<h2 class="title1" >Ingrese los datos del producto a vender</h2>   
-<form action="" class="form2" >
-    <p><label for=""> Nombre (Producto) </label></p>
-    <input type="text" placeholder="Ingrese el nombre del producto">
-    <p><label for=""> Fotografias </label></p>
-    <input type="file" class="btn3" > <br> <label for=""> PNG, JPG </label>
-    <p><label for=""> Descripción del producto </label></p>
-    <p><textarea name="" id="" placeholder="Ingrese todos los datos de especificación del producto"></textarea></p>
-    <p><label for=""> Costo del producto </label></p>
-    <input type="text" value="$" class="input2" disabled > <input type="text" class="inputp3" > <input type="text" value="COP" class="input2" disabled>
-    <p class="centrar">
-    <button type="button" class="btn4" > Siguiente </button>
-    </p>
-</form>
+<header>
+    <h3>My proyect</h3>
+    <h1> Inicio de sesión </h1> 
+</header>
+    <form action="" class="form1" >
+        <p><label for="usuario" class="label2" > Ingrese correo electronico </label></p>
+        <input id="usuario" class="inputp2" type="email" placeholder="minombre@miproyecto.com">
+        <p><label for="password" class="label2" > Contraseña </label></p>
+        <input id="password" class="inputp2" type="password" placeholder="*************">
+        <p id="incorrecto" ></p>
+        <button type="button" class="btn2" onclick="ingresar()">Entrar</button>
+        <a href="pantalla1.html" class="linkregistro" >¿Nuevo aquí? Registrate </a>
+    </form>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 
     <div class="divfooter" >
@@ -52,5 +46,6 @@
     <br><a href="pantalla1.html"> Registrarse </a>
 </div>
 </footer>
+<script src="/js/proyecto.js"></script>
 </body>
 </html>
