@@ -37,9 +37,9 @@ function img(input)
         reader.readAsDataURL(input.files[0]);
     }
 }
-$("#imgFile").change(function(){
-    img(this);
-})
+// // $("#imgFile").change(function(){
+//     img(this);
+// })
 
 function registro ()
 

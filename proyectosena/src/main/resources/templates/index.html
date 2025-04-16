@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
         <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Imagenes/lupa.png"> </button>
     </div>
     <div class="divIndex2" > 
+        <a th:href="@{/logout}">Cerrar sesión</a>
         <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
         <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a>
     </div>

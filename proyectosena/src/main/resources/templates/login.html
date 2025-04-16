@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,29 @@
     <title>Mi primer proyecto</title>
 </head>
 <body>
-<div class="hp4">
-    <h2 class="pagop4" >Medios de pago</h2>
-    <img class="img4" src="/Imagenes/imagen4.png" alt="">
-</div>
-<h2 class="title1" > Tipos de pago y tiempos de entrega </h2>  
-<form action="" class="form3" >
-    <p><label for=""> Tipos de pago </label></p>
-    <button type="button" class="btn6" > TC </button><button type="button" class="btn6"> TD </button><button type="button" class="btn6" > CE </button><button type="button" class="btn8" > Otros </button>
-    <p><label for="" class="otros1" > Confirme todos los que apliquen de la siguiente manera, TC: Tarjeta de credito, TD: Tarjeta debito, CE: Contra entrega, Otros: Especifique en el siguiente cuadro los metodos a usar. </label></p>
-    <p><textarea name="" id="" placeholder="Otros..." ></textarea></p>
-    <label for=""> Tiempos de entrega</label>
-    <p><label for="" class="otros1" > A continuación confirme los tiempos de entrega correspondientes. H: Horas, SEM: Semanas </label></p>
-    <button type="button" class="btn6" > 24H </button><button type="button" class="btn6" > 48H </button><button type="button" class="btn6" > 1 SEM </button><button type="button" class="btn7"> Otro: </button> <input type="text" class="inputp4" >
-    <p class="centrar1" >
-    <button type="button" class="btn5" > Finalizar </button>
-    </p>
-</form>
+<header>
+    <h3>My proyect</h3>
+    <h1> Inicio de sesión </h1> 
+</header>
+    <form th:action="@{/login}" method="post" class="form1" >
+        <div th:if="${param.error}">
+            <div class="error">
+                Usuario o contraseña invalidos
+            </div>
+        </div>
+        <div th:if="${param.logout}">
+            <div class="logout">
+                Ha cerrado sesion exitosamente
+            </div>
+        </div>
+        <p><label for="username" class="label2" > Ingrese correo electronico </label></p>
+        <input id="username" name="username" class="inputp2" type="email" placeholder="minombre@miproyecto.com" required autofocus="autofocus">
+        <p><label for="password" class="label2" > Contraseña </label></p>
+        <input id="password" name="password" class="inputp2" type="password" placeholder="*************" required autofocus="autofocus" >
+        <p id="incorrecto" ></p>
+        <br><input type="submit" id="login-submit" value="Ingresar"/>
+        <span>Si eres nuevo usuario<a th:href="@{/registro}" class="linkregistro"> Registro</a></span>
+    </form>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 
     <div class="divfooter" >
@@ -50,5 +56,6 @@
         <br><a href="registro.html"> Registrarse </a>
     </div>
 </footer>
+<!-- <script src="/js/proyecto.js"></script> -->
 </body>
 </html>
