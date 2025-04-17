@@ -11,13 +11,15 @@
     <!-- Formulario de registro -->
     <header>
         <h3>My project</h3>
-        <h1>Registrarse</h1>
+        <h2>Registrarse</h2>
     </header>
     <div>
+        <div class="anchoAlerta" >
         <div th:if="${param.exito}">
             <div class="alerta">
                 Se ha registrado exitosamente a la aplicacion
             </div>
+        </div>
         </div>
         <form th:action="@{/registro}" method="post" th:object="${usuario}">
             <h2>Crea tu cuenta</h2>
@@ -25,8 +27,8 @@
             <P>
                 <label for="nombre">Ingrese su nombre</label>
             </P>
-            <input type="text" id="nombre" th:field="*{nombre}" class="inputNombre" placeholder="Primer nombre" maxlength="50" minlength="2" required>
-            <input type="text" id="apellido" th:field="*{apellido}" class="inputNombre" placeholder="Primer apellido" maxlength="50" minlength="2" required>
+            <input type="text" id="nombre" th:field="*{nombre}" class="nombre" placeholder="Primer nombre" maxlength="50" minlength="2" required>
+            <input type="text" id="apellido" th:field="*{apellido}" class="nombre" placeholder="Primer apellido" maxlength="50" minlength="2" required>
             
         <P>
             <label for="correo">Correo electronico</label>
@@ -41,7 +43,7 @@
         </P>
             <input type="password" id="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
             <p id="incorrecto"></p>
-            <span>¿Estas registrado? <a th:href="@{/login}">Inicio de sesion</a> </span>
+            <span class="aRedireccion" >¿Estas registrado? <a class="aRedireccion text" th:href="@{/login}">Inicio de sesion</a> </span>
             <!-- Imagen de perfil -->
             <!-- <p class="p1">
                 <label>Imagen de perfil</label> 
@@ -54,9 +56,9 @@
     </div>
     <!-- Boton principal para envio del formulario -->
     <p>
-        <img src="/Imagenes/imagen2.png" alt="caja" class="img2">
-        <label for="terminos" class="term">Al crear una cuenta, acepta las condiciones de uso y aviso de privacidad.</label>
-        <input type="checkbox" class="check" id="terminos">
+        <img src="/img/imagen2.png"  class="img2">
+        <label for="terminos" class="terms">Al crear una cuenta, acepta las condiciones de uso y aviso de privacidad.</label>
+        <!-- <input type="checkbox" class="check" id="terminos" required> -->
     </p>
     <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 

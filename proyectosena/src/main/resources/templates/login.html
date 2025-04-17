@@ -8,27 +8,29 @@
 </head>
 <body>
 <header>
-    <h3>My proyect</h3>
-    <h1> Inicio de sesión </h1> 
+    <h3>My project</h3>
+    <h2> Inicio de sesión </h2> 
 </header>
+<div class="anchoAlerta">
+    <div th:if="${param.logout}">
+        <div class="logout">
+            Ha cerrado sesion exitosamente
+        </div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="error">
+            Usuario o contraseña invalidos
+        </div>
+    </div>
+</div>
     <form th:action="@{/login}" method="post" class="form1" >
-        <div th:if="${param.error}">
-            <div class="error">
-                Usuario o contraseña invalidos
-            </div>
-        </div>
-        <div th:if="${param.logout}">
-            <div class="logout">
-                Ha cerrado sesion exitosamente
-            </div>
-        </div>
         <p><label for="username" class="label2" > Ingrese correo electronico </label></p>
         <input id="username" name="username" class="inputp2" type="email" placeholder="minombre@miproyecto.com" required autofocus="autofocus">
         <p><label for="password" class="label2" > Contraseña </label></p>
         <input id="password" name="password" class="inputp2" type="password" placeholder="*************" required autofocus="autofocus" >
         <p id="incorrecto" ></p>
-        <br><input type="submit" id="login-submit" value="Ingresar"/>
-        <span>Si eres nuevo usuario<a th:href="@{/registro}" class="linkregistro"> Registro</a></span>
+        <br><input type="submit" id="login-submit" class="btn2" value="Ingresar"/>
+        <span class="aRedireccion" >¿Nuevo Usuario?<a th:href="@{/registro}" class="aRedireccion text"> Registrate</a></span>
     </form>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 

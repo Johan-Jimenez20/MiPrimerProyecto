@@ -4,6 +4,13 @@ header {
     padding-top: 2px;
     border: solid black;
     margin: 5px;
+    border-radius: 10px;
+}
+
+.headerDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
 }
 
 h1 {
@@ -13,6 +20,7 @@ h1 {
 form {
     margin: 0 auto;
     width: 400px;
+    height: 350px;
     background-color: rgb(247, 243, 243);
     padding: 15px;
     border-radius: 20px;
@@ -47,7 +55,7 @@ input {
 }
 
 .input3 {
-    width: 320px;
+    width: 370px;
 }
 
 p {
@@ -86,8 +94,6 @@ p {
     border-radius: 60px;
 }
 
-
-
 .btn1 {
     width: 200px;
     height: 50px;
@@ -97,7 +103,7 @@ p {
     font-size: 20px;
     color: #FFFFFF;
     position: absolute;
-    left: 1050px;
+    left: 950px;
     top: 400px;
 }
 
@@ -109,21 +115,22 @@ p {
 .img2 {
     width: 200px;
     position: absolute;
-    left: 1050px;
+    left: 950px;
     top: 200px;
 }
 
 .check {
     width: 15px;
     position: absolute;
-    left: 1000px;
+    left: 950px;
     top: 460px;
 }
 
 .terms {
+    width: 200px;
     font-size: 15px;
     position: absolute;
-    left: 1040px;
+    left: 950px;
     top: 460px;
 }
 
@@ -133,6 +140,7 @@ footer {
     border: solid black;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .divfooter {
@@ -156,28 +164,62 @@ a {
     color: #FFFFFF;
 }
 
+.anchoAlerta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.aRedireccion {
+    color: black;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: rgb(58, 51, 51);
+}
+
+
 /* Extras pantalla 2 */
 
 .form1 {
-    height: 370px;
+    height: 340px;
 }
 
 .label2 {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
     display: flex;
 }
 
 .inputp2 {
-    height: 40px;
+    height: 35px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .btn2 {
     margin-left: 110px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 180px;
     height: 50px;
     border: solid black;
@@ -191,6 +233,37 @@ a {
     background-color: #9BC6BF;
     color: black;
 }
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #ef8c8c;
+    color: #060000;
+    border: 1px solid #badbcc;
+}
+
 
 /* Extras pantalla 3*/
 
@@ -631,8 +704,9 @@ ul li:hover .dropdown {
 }
 
 .divIndex2 {
-    padding-left: 250px;
+    padding-left: 230px;
 }
+
 
 .aIndex2 {
     margin: 10px;
@@ -657,9 +731,9 @@ ul li:hover .dropdown {
 }
 
 .divIndex4 {
-    margin: 5px;
+    margin: 3px;
     border-radius: 5px;
-    width: 215px;
+    width: 198px;
     background-color: #6A9A9E;
     border: solid;
     border-color: #325C6C;
