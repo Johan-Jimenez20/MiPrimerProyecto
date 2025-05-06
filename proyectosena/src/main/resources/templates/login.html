@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,29 @@
 </head>
 <body>
 <header>
-    <h3>My proyect</h3>
-    <h1> Inicio de sesión </h1> 
+    <h3>My project</h3>
+    <h2> Inicio de sesión </h2> 
 </header>
-    <form action="" class="form1" >
-        <p><label for="usuario" class="label2" > Ingrese correo electronico </label></p>
-        <input id="usuario" class="inputp2" type="email" placeholder="minombre@miproyecto.com">
+<div class="anchoAlerta">
+    <div th:if="${param.logout}">
+        <div class="logout">
+            Ha cerrado sesion exitosamente
+        </div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="error">
+            Usuario o contraseña invalidos
+        </div>
+    </div>
+</div>
+    <form th:action="@{/login}" method="post" class="form1" >
+        <p><label for="username" class="label2" > Ingrese correo electronico </label></p>
+        <input id="username" name="username" class="inputp2" type="email" placeholder="minombre@miproyecto.com" required autofocus="autofocus">
         <p><label for="password" class="label2" > Contraseña </label></p>
-        <input id="password" class="inputp2" type="password" placeholder="*************">
+        <input id="password" name="password" class="inputp2" type="password" placeholder="*************" required autofocus="autofocus" >
         <p id="incorrecto" ></p>
-        <button type="button" class="btn2" onclick="ingresar()">Entrar</button>
-        <a href="pantalla1.html" class="linkregistro" >¿Nuevo aquí? Registrate </a>
+        <br><input type="submit" id="login-submit" class="btn2" value="Ingresar"/>
+        <span class="aRedireccion" >¿Nuevo Usuario?<a th:href="@{/registro}" class="aRedireccion text"> Registrate</a></span>
     </form>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 
@@ -46,6 +58,6 @@
         <br><a href="registro.html"> Registrarse </a>
     </div>
 </footer>
-<script src="/js/proyecto.js"></script>
+<!-- <script src="/js/proyecto.js"></script> -->
 </body>
 </html>
