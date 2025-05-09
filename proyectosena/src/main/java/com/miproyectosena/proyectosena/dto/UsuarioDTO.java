@@ -1,5 +1,7 @@
 package com.miproyectosena.proyectosena.dto;
 
+import java.util.List;
+
 public class UsuarioDTO {
     
     private Long id;
@@ -8,6 +10,7 @@ public class UsuarioDTO {
     private String correo;
     private String numeroCelular;
     private String password;
+    private List<String> roles;
 
     public UsuarioDTO() {
     }
@@ -16,26 +19,32 @@ public class UsuarioDTO {
         this.correo = correo;
     }
 
-    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password) {
+    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password,
+            List<String> roles) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.numeroCelular = numeroCelular;
         this.password = password;
+        this.roles = roles;
     }
 
-    public UsuarioDTO(Long id, String nombre, String apellido, String correo, String numeroCelular, String password) {
+    public UsuarioDTO(Long id, String nombre, String apellido, String correo, String numeroCelular, String password,
+            List<String> roles) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.numeroCelular = numeroCelular;
         this.password = password;
+        this.roles = roles;
     }
 
+    
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -68,6 +77,14 @@ public class UsuarioDTO {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
     }
 
     
