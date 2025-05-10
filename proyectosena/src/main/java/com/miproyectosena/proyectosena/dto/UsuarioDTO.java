@@ -10,37 +10,48 @@ public class UsuarioDTO {
     private String correo;
     private String numeroCelular;
     private String password;
-    private List<String> roles;
+    private List<String> rolSeleccionado;
 
     public UsuarioDTO() {
     }
 
     public UsuarioDTO(String correo) {
         this.correo = correo;
+    } 
+
+    public UsuarioDTO(List<String> rolSeleccionado) {
+        this.rolSeleccionado = rolSeleccionado;
     }
 
-    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password,
-            List<String> roles) {
+    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.numeroCelular = numeroCelular;
         this.password = password;
-        this.roles = roles;
     }
 
+    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password,
+            List<String> rolSeleccionado) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.numeroCelular = numeroCelular;
+        this.password = password;
+        this.rolSeleccionado = rolSeleccionado;
+    }
+    
     public UsuarioDTO(Long id, String nombre, String apellido, String correo, String numeroCelular, String password,
-            List<String> roles) {
+            List<String> rolSeleccionado) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.numeroCelular = numeroCelular;
         this.password = password;
-        this.roles = roles;
+        this.rolSeleccionado = rolSeleccionado;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -79,13 +90,15 @@ public class UsuarioDTO {
         this.password = password;
     }
 
-    public List<String> getRoles() {
-        return roles;
+    public List<String> getRolSeleccionado() {
+        return rolSeleccionado;
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setRolSeleccionado(List<String> rolSeleccionado) {
+        this.rolSeleccionado = rolSeleccionado;
     }
+
+
 
     
 
