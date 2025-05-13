@@ -43,6 +43,12 @@
         </P>
             <input type="password" id="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
             <p id="incorrecto"></p>
+            <p>
+            <label>Selecciona uno o más roles:</label><br>
+
+            <input type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_COMPRADOR"/> Comprador<br>
+            <input type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_VENDEDOR"/>Vendedor<br> <br>
+        </p>
             <span class="aRedireccion" >¿Estas registrado? <a class="aRedireccion text" th:href="@{/login}">Inicio de sesion</a> </span>
             <!-- Imagen de perfil -->
             <!-- <p class="p1">

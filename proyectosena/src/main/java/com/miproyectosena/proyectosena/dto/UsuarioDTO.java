@@ -97,9 +97,4 @@ public class UsuarioDTO {
     public void setRolSeleccionado(List<String> rolSeleccionado) {
         this.rolSeleccionado = rolSeleccionado;
     }
-
-
-
-    
-
 }

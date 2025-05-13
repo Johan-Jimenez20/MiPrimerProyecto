@@ -7,5 +7,5 @@ import com.miproyectosena.proyectosena.models.Roles;
 
 @Repository
 public interface IRolesRepository extends JpaRepository<Roles, Long> {
-    Roles findbyNombre(String nombre);
+    Roles findByNombre(String nombre);
 }

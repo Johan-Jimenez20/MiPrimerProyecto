@@ -43,7 +43,7 @@ public class UsuarioServicioImpl implements IUsuarioServicio{
 
         Set<Roles> roles = new HashSet<>();
         for (String nombreRol: registroDTO.getRolSeleccionado()){
-            Roles rol = iRolesRepository.findbyNombre(nombreRol);
+            Roles rol = iRolesRepository.findByNombre(nombreRol);
             if(rol != null) {
                 roles.add(rol);
             }
