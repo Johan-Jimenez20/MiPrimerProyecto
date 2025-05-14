@@ -45,9 +45,10 @@
             <p id="incorrecto"></p>
             <p>
             <label>Selecciona uno o más roles:</label><br>
-
-            <input type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_COMPRADOR"/> Comprador<br>
-            <input type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_VENDEDOR"/>Vendedor<br> <br>
+        <div class="checkRol">
+            <input id="checkRol1" type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_COMPRADOR"/> <label for="checkRol1">Comprador</label><br>
+            <input id="checkRol2" type="checkbox" th:field="*{rolSeleccionado}" value="ROLE_VENDEDOR"/><label for="checkRol2">Vendedor</label><br> <br>
+        </div>
         </p>
             <span class="aRedireccion" >¿Estas registrado? <a class="aRedireccion text" th:href="@{/login}">Inicio de sesion</a> </span>
             <!-- Imagen de perfil -->

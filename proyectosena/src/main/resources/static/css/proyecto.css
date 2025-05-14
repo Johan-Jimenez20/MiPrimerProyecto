@@ -20,7 +20,7 @@ h1 {
 form {
     margin: 0 auto;
     width: 400px;
-    height: 350px;
+    height: 400px;
     background-color: rgb(247, 243, 243);
     padding: 15px;
     border-radius: 20px;
@@ -262,6 +262,13 @@ a {
     background-color: #ef8c8c;
     color: #060000;
     border: 1px solid #badbcc;
+}
+
+.checkRol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 215px;
 }
 
 
