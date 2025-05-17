@@ -7,144 +7,94 @@
     <title>Mi primer proyecto</title>
 </head>
 <body>
-    <header class="headerIndex">  
-    <ul class="ul1" >
-        <li>
-        <button id="btnDropdown" class="btn15"><img class="imgIndex" src="/Img/icono.png" alt=""></button> 
-        <ul class="dropdown" >
-            <li><a class="aIndex" href="/html/pantalla8.html"> Mis pedidos </a></li>
-            <li><a class="aIndex" href=""> Segunda Opción </a></li>
-            <li><a class="aIndex" href=""> Tercera Opción </a></li>
-            <li><a class="aIndex" href=""> Cuarta Opción </a></li>
-            <li><a class="aIndex" href=""> Quinta Opción </a></li>
-        </ul>
-        </li>   
-    </ul>       
-    <div class="divIndex"> 
-        <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
+   <header class="headerIndex">  
+     <div class="divIndex"> 
+            <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
+        </div>
+        <div class="divIndex2" > 
+            <a th:href="@{/logout}" >Cerrar sesión</a>
+            <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
+            <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
+        </div>
+        </header>
+   <div class="container"> 
+    <div class="sidebar" id="sidebar" >
+        <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+            <ul>
+                <li><a th:href="@{/}"> Mis pedidos </a></li>
+                <li><a > Productos </a></li>
+                <li><a > Carrito de compras </a></li>
+                <li><a > ¿Quieres vender? </a></li>
+            </ul>   
+        </ul>     
+        </div>  
+        <div class="main-content" id="main">
+        <h2 class="h2Index"> Productos </h2>
+        <p class="pIndex2"> Categoria: Juegos </p>
+            <div class="divIndex3">
+                <div class="divIndex4">
+                    <img class="imgIndex3" src="/img/caja.png" alt="">
+                    <P class="pIndex"> Nombre producto </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                    <p class="pIndex"> Precio: $$$$$ </p> 
+                    <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
+                </div>
+                <div class="divIndex4">
+                    <img class="imgIndex3" src="/img/caja.png" alt="">
+                    <P class="pIndex"> Nombre producto </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                    <p class="pIndex"> Precio: $$$$$ </p> 
+                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                </div>
+                <div class="divIndex4">
+                    <img class="imgIndex3" src="/img/caja.png" alt="">
+                    <P class="pIndex"> Nombre producto </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                    <p class="pIndex"> Precio: $$$$$ </p> 
+                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                </div>
+                <div class="divIndex4">
+                    <img class="imgIndex3" src="/img/caja.png" alt="">
+                    <P class="pIndex"> Nombre producto </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                    <p class="pIndex"> Precio: $$$$$ </p> 
+                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                </div>
+            </div>
+        </div>  
     </div>
-    <div class="divIndex2" > 
-        <a th:href="@{/logout}" >Cerrar sesión</a>
-        <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
-        <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
-    </div>
-    </header>
-    <h2 class="h2Index"> Productos </h2>
-    <p class="pIndex2"> Categoria: Juegos </p>
-    <div class="divIndex3">
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
+    </div>    
+    <h3 class="mapa" >Mapa de navegación</h3>
+    <footer> 
+        <div class="divfooter" >
+            <br><label class="acerca" for="">Acerca de</label>
+            <br><a href="/index.html"> Inicio </a>
+            <br><a href="/html/login.html"> Inicio de sesión </a>
         </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+        <div class="divfooter" >
+            <br><label for=""> Vendedor </label>
+            <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
+            <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
+            <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
         </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+        <div class="divfooter" >
+            <br><label for=""> Redes sociales </label>
+            <br><a href="https://www.x.com/"> X </a>
+            <br><a href="https://www.facebook.com/"> Facebook </a>
+            <br><a href="https://www.instagram.com/"> Instagram </a>
+            <br><a href="https://www.youtube.com/"> YouTube </a>
         </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-    </div>
-    <p class="pIndex2"> Categoria: Hogar </p>
-    <div class="divIndex3">
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a></BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a></BUtton>
-        </div>
-        <div class="divIndex4">
-            <img class="imgIndex3" src="/img/caja.png" alt="">
-            <P class="pIndex"> Nombre producto </P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-            <p class="pIndex"> Precio: $$$$$ </p> 
-            <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-        </div>
-    </div>
-<h3 class="mapa" >Mapa de navegación</h3>
-<footer> 
-    <div class="divfooter" >
-        <br><label class="acerca" for="">Acerca de</label>
-        <br><a href="/index.html"> Inicio </a>
-        <br><a href="/html/login.html"> Inicio de sesión </a>
-    </div>
-    <div class="divfooter" >
-        <br><label for=""> Vendedor </label>
-        <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
-        <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
-        <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
-    </div>
-    <div class="divfooter" >
-        <br><label for=""> Redes sociales </label>
-        <br><a href="https://www.x.com/"> X </a>
-        <br><a href="https://www.facebook.com/"> Facebook </a>
-        <br><a href="https://www.instagram.com/"> Instagram </a>
-        <br><a href="https://www.youtube.com/"> YouTube </a>
-    </div>
-    <div class="divfooter" >
-        <br><label for=""> Clientes </label>
-        <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
-        <br><a href="html/registro.html"> Registrarse </a>
-    </div>
-</footer>    
+        <div class="divfooter" >
+            <br><label for=""> Clientes </label>
+            <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
+            <br><a href="html/registro.html"> Registrarse </a>
+        </div>   
+</footer>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+        document.getElementById("main").classList.toggle("expanded");
+        }
+</script>    
 </body>
 </html>

@@ -49,6 +49,9 @@ public class Usuario {
     public Usuario(String string, String string2, String string3, String string4, String string5, List<String> list) {
     }
    
+    public Usuario() {
+    }
+
     public Usuario(String nombre, String apellido, String correo, String numeroCelular, String password,
             Set<Roles> roles) {
         this.nombre = nombre;

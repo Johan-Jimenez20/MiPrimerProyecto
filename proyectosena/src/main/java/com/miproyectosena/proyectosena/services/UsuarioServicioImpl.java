@@ -59,6 +59,8 @@ public class UsuarioServicioImpl implements IUsuarioServicio{
        if (usuario == null) {
             throw new UsernameNotFoundException("Usuario o contraseña invalidos");
        }
+
+    
        List<GrantedAuthority> authorities = usuario.getRoles()
             .stream()
             .map(rol -> new SimpleGrantedAuthority(rol.getNombre()))
