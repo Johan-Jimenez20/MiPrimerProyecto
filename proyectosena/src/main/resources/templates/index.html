@@ -1,100 +1,290 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/proyecto.css">
     <title>Mi primer proyecto</title>
 </head>
-<body>
-   <header class="headerIndex">  
-     <div class="divIndex"> 
-            <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
-        </div>
-        <div class="divIndex2" > 
-            <a th:href="@{/logout}" >Cerrar sesión</a>
-            <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
-            <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
-        </div>
-        </header>
-   <div class="container"> 
-    <div class="sidebar" id="sidebar" >
-        <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
-            <ul>
-                <li><a th:href="@{/}"> Mis pedidos </a></li>
-                <li><a > Productos </a></li>
-                <li><a > Carrito de compras </a></li>
-                <li><a > ¿Quieres vender? </a></li>
-            </ul>   
-        </ul>     
-        </div>  
-        <div class="main-content" id="main">
-        <h2 class="h2Index"> Productos </h2>
-        <p class="pIndex2"> Categoria: Juegos </p>
-            <div class="divIndex3">
-                <div class="divIndex4">
-                    <img class="imgIndex3" src="/img/caja.png" alt="">
-                    <P class="pIndex"> Nombre producto </P>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                    <p class="pIndex"> Precio: $$$$$ </p> 
-                    <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
-                </div>
-                <div class="divIndex4">
-                    <img class="imgIndex3" src="/img/caja.png" alt="">
-                    <P class="pIndex"> Nombre producto </P>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                    <p class="pIndex"> Precio: $$$$$ </p> 
-                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                </div>
-                <div class="divIndex4">
-                    <img class="imgIndex3" src="/img/caja.png" alt="">
-                    <P class="pIndex"> Nombre producto </P>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                    <p class="pIndex"> Precio: $$$$$ </p> 
-                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                </div>
-                <div class="divIndex4">
-                    <img class="imgIndex3" src="/img/caja.png" alt="">
-                    <P class="pIndex"> Nombre producto </P>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                    <p class="pIndex"> Precio: $$$$$ </p> 
-                    <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                </div>
+<body>    
+    <!-- ROLE COMPRADOR -->
+    <div sec:authorize="hasRole('COMPRADOR') and !hasRole('VENDEDOR')">
+        <header class="headerIndex">  
+            <div class="divIndex"> 
+                <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
             </div>
-        </div>  
+            <div class="divIndex2" > 
+                <a th:href="@{/logout}" >Cerrar sesión</a>
+                <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
+                <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
+            </div>
+            </header>
+    <div class="container"> 
+            <div class="sidebar" id="sidebar" >
+                <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+                    <ul>
+                        <li><a th:href="@{/}"> Mis pedidos </a></li>
+                        <li><a > Productos </a></li>
+                        <li><a > Carrito de compras </a></li>
+                        <li><a > ¿Quieres vender? </a></li>
+                    </ul>      
+                </div>  
+        <div class="main-content" id="main">
+            <H1>Has ingresado como comprador</H1>
+            <h2 class="h2Index"> Productos </h2>
+                <p class="pIndex2"> Categoria: Juegos </p>
+                    <div class="divIndex3">
+                        <div class="divIndex4">
+                            <img class="imgIndex3" src="/img/caja.png" alt="">
+                            <P class="pIndex"> Nombre producto </P>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
+                        </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                </div>
+            </div>  
+        </div>    
+        <h3 class="mapa" >Mapa de navegación</h3>
+        <footer> 
+            <div class="divfooter" >
+                <br><label class="acerca" for="">Acerca de</label>
+                <br><a href="/index.html"> Inicio </a>
+                <br><a href="/html/login.html"> Inicio de sesión </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Vendedor </label>
+                <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
+                <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
+                <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Redes sociales </label>
+                <br><a href="https://www.x.com/"> X </a>
+                <br><a href="https://www.facebook.com/"> Facebook </a>
+                <br><a href="https://www.instagram.com/"> Instagram </a>
+                <br><a href="https://www.youtube.com/"> YouTube </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Clientes </label>
+                <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
+                <br><a href="html/registro.html"> Registrarse </a>
+            </div>   
+    </footer>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+            document.getElementById("main").classList.toggle("expanded");
+            }
+        </script>    
     </div>
-    </div>    
-    <h3 class="mapa" >Mapa de navegación</h3>
-    <footer> 
-        <div class="divfooter" >
-            <br><label class="acerca" for="">Acerca de</label>
-            <br><a href="/index.html"> Inicio </a>
-            <br><a href="/html/login.html"> Inicio de sesión </a>
-        </div>
-        <div class="divfooter" >
-            <br><label for=""> Vendedor </label>
-            <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
-            <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
-            <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
-        </div>
-        <div class="divfooter" >
-            <br><label for=""> Redes sociales </label>
-            <br><a href="https://www.x.com/"> X </a>
-            <br><a href="https://www.facebook.com/"> Facebook </a>
-            <br><a href="https://www.instagram.com/"> Instagram </a>
-            <br><a href="https://www.youtube.com/"> YouTube </a>
-        </div>
-        <div class="divfooter" >
-            <br><label for=""> Clientes </label>
-            <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
-            <br><a href="html/registro.html"> Registrarse </a>
-        </div>   
-</footer>
-<script>
-    function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle("collapsed");
-        document.getElementById("main").classList.toggle("expanded");
-        }
-</script>    
+</body>
+    <!-- ROLE VENDEDOR  -->
+<body>
+    <div sec:authorize="hasRole('VENDEDOR') and !hasRole('COMPRADOR')">
+        <header class="headerIndex">  
+            <div class="divIndex"> 
+                <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
+            </div>
+            <div class="divIndex2" > 
+                <a th:href="@{/logout}" >Cerrar sesión</a>
+                <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
+                <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
+            </div>
+            </header>
+    <div class="container"> 
+            <div class="sidebar" id="sidebar" >
+                <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+                    <ul>
+                        <li><a th:href="@{/}"> Mis ventas </a></li>
+                        <li><a > Agregar producto </a></li>
+                        <li><a > Mis productos </a></li>
+                        <li><a > ¿Quieres comprar? </a></li>
+                    </ul>      
+                </div>  
+        <div class="main-content" id="main">
+            <H1>Has ingresado como Vendedor</H1>
+            <h2 class="h2Index"> Productos </h2>
+                <p class="pIndex2"> Categoria: Juegos </p>
+                    <div class="divIndex3">
+                        <div class="divIndex4">
+                            <img class="imgIndex3" src="/img/caja.png" alt="">
+                            <P class="pIndex"> Nombre producto </P>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
+                        </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                </div>
+            </div>  
+        </div>    
+        <h3 class="mapa" >Mapa de navegación</h3>
+        <footer> 
+            <div class="divfooter" >
+                <br><label class="acerca" for="">Acerca de</label>
+                <br><a href="/index.html"> Inicio </a>
+                <br><a href="/html/login.html"> Inicio de sesión </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Vendedor </label>
+                <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
+                <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
+                <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Redes sociales </label>
+                <br><a href="https://www.x.com/"> X </a>
+                <br><a href="https://www.facebook.com/"> Facebook </a>
+                <br><a href="https://www.instagram.com/"> Instagram </a>
+                <br><a href="https://www.youtube.com/"> YouTube </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Clientes </label>
+                <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
+                <br><a href="html/registro.html"> Registrarse </a>
+            </div>   
+    </footer>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+            document.getElementById("main").classList.toggle("expanded");
+            }
+        </script>    
+    </div>
+</body>
+<body>    
+    <!-- ROLE COMPRADOR Y VENDEDOR -->
+    <div sec:authorize="hasRole('COMPRADOR') and hasRole('VENDEDOR')">
+        <header class="headerIndex">  
+            <div class="divIndex"> 
+                <input id="buscar" class="inputIndex" type="" placeholder="Buscar..."> <button id="btnBuscar" class="btn16" > <img class="imgIndex2" src="/Img/lupa.png"> </button>
+            </div>
+            <div class="divIndex2" > 
+                <a th:href="@{/logout}" >Cerrar sesión</a>
+                <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
+                <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
+            </div>
+            </header>
+    <div class="container"> 
+            <div class="sidebar" id="sidebar" >
+                <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+                    <ul>
+                        <li><a th:href="@{/}"> Mis pedidos </a></li>
+                        <li><a > Productos </a></li>
+                        <li><a > Carrito de compras </a></li>
+                        <li><a th:href="@{/}"> Mis ventas </a></li>
+                        <li><a > Agregar producto </a></li>
+                        <li><a > Mis productos </a></li>
+                    </ul>      
+                </div>  
+        <div class="main-content" id="main">
+            <H1>Has ingresado como comprador y vendedor</H1>
+            <h2 class="h2Index"> Productos </h2>
+                <p class="pIndex2"> Categoria: Juegos </p>
+                    <div class="divIndex3">
+                        <div class="divIndex4">
+                            <img class="imgIndex3" src="/img/caja.png" alt="">
+                            <P class="pIndex"> Nombre producto </P>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
+                        </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                    <div class="divIndex4">
+                        <img class="imgIndex3" src="/img/caja.png" alt="">
+                        <P class="pIndex"> Nombre producto </P>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
+                        <p class="pIndex"> Precio: $$$$$ </p> 
+                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                    </div>
+                </div>
+            </div>  
+        </div>    
+        <h3 class="mapa" >Mapa de navegación</h3>
+        <footer> 
+            <div class="divfooter" >
+                <br><label class="acerca" for="">Acerca de</label>
+                <br><a href="/index.html"> Inicio </a>
+                <br><a href="/html/login.html"> Inicio de sesión </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Vendedor </label>
+                <br><a href="/html/ingresoProducto.html"> Ingrese producto nuevo </a>
+                <br><a href="/html/pagoVendedor.html"> Metodos de pago </a>
+                <br><a href="/html/pagoUsuario.html"> Confirmación pagos </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Redes sociales </label>
+                <br><a href="https://www.x.com/"> X </a>
+                <br><a href="https://www.facebook.com/"> Facebook </a>
+                <br><a href="https://www.instagram.com/"> Instagram </a>
+                <br><a href="https://www.youtube.com/"> YouTube </a>
+            </div>
+            <div class="divfooter" >
+                <br><label for=""> Clientes </label>
+                <br><a href="/html/confirmacionDatos.html"> Datos de entrega </a>
+                <br><a href="html/registro.html"> Registrarse </a>
+            </div>   
+    </footer>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+            document.getElementById("main").classList.toggle("expanded");
+            }
+        </script>    
+    </div>
 </body>
 </html>

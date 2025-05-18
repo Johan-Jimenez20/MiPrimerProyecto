@@ -675,14 +675,16 @@ ul li:hover .dropdown {
 }
 
 .headerIndex {
-   align-items: center;
-   display: flex; 
+    height: 40px;
+    align-items: center;
+    display: flex; 
 }
 
 .divIndex {
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     padding-left: 370px;
 }
 
