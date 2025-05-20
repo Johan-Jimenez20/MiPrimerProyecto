@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.thymeleaf.extras.springsecurity6.dialect.SpringSecurityDialect;
 
 import com.miproyectosena.proyectosena.services.IUsuarioServicio;
 
@@ -23,6 +24,11 @@ public class UsuarioSeguridad {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Bean
+    public SpringSecurityDialect springSecurityDialect(){
+    return new SpringSecurityDialect();
+    }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider(){

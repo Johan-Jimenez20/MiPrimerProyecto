@@ -1,5 +1,7 @@
 package com.miproyectosena.proyectosena.dto;
 
+import java.util.List;
+
 public class UsuarioDTO {
     
     private Long id;
@@ -8,12 +10,17 @@ public class UsuarioDTO {
     private String correo;
     private String numeroCelular;
     private String password;
+    private List<String> rolSeleccionado;
 
     public UsuarioDTO() {
     }
 
     public UsuarioDTO(String correo) {
         this.correo = correo;
+    } 
+
+    public UsuarioDTO(List<String> rolSeleccionado) {
+        this.rolSeleccionado = rolSeleccionado;
     }
 
     public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password) {
@@ -24,18 +31,31 @@ public class UsuarioDTO {
         this.password = password;
     }
 
-    public UsuarioDTO(Long id, String nombre, String apellido, String correo, String numeroCelular, String password) {
+    public UsuarioDTO(String nombre, String apellido, String correo, String numeroCelular, String password,
+            List<String> rolSeleccionado) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.numeroCelular = numeroCelular;
+        this.password = password;
+        this.rolSeleccionado = rolSeleccionado;
+    }
+    
+    public UsuarioDTO(Long id, String nombre, String apellido, String correo, String numeroCelular, String password,
+            List<String> rolSeleccionado) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.numeroCelular = numeroCelular;
         this.password = password;
+        this.rolSeleccionado = rolSeleccionado;
     }
 
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -70,6 +90,11 @@ public class UsuarioDTO {
         this.password = password;
     }
 
-    
+    public List<String> getRolSeleccionado() {
+        return rolSeleccionado;
+    }
 
+    public void setRolSeleccionado(List<String> rolSeleccionado) {
+        this.rolSeleccionado = rolSeleccionado;
+    }
 }
