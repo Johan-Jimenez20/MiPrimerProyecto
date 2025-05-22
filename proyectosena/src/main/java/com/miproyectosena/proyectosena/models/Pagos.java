@@ -1,0 +1,45 @@
+package com.miproyectosena.proyectosena.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table (name="pagos")
+public class Pagos {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombrePagos;
+
+    public Pagos() {
+    }
+
+    public Pagos(Long id, String nombreProducto) {
+        this.id = id;
+        this.nombrePagos = nombreProducto;
+    }
+
+    public Pagos(String nombreProducto) {
+        this.nombrePagos = nombreProducto;
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getNombreProducto() {
+        return nombrePagos;
+    }
+    public void setNombreProducto(String nombreProducto) {
+        this.nombrePagos = nombreProducto;
+    }
+
+    
+
+}
