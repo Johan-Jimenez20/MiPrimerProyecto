@@ -2,26 +2,30 @@ package com.miproyectosena.proyectosena.dto;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ProductoDTO {
 
     private Long id;
+    private String usuario;
     private String nombreProducto;
-    private String ruta_imagen;
+    private MultipartFile ruta_imagen;
     private String descripcion;
     private int costo;
-    private List<String> categoriaSeleccionada;
+    private Long categoriaSeleccionada;
     private List<String> pagoSeleccionado;
 
     public ProductoDTO() {
     }
 
-    public ProductoDTO(List<String> categoriaSeleccionada, List<String> pagoSeleccionado) {
+    public ProductoDTO(Long categoriaSeleccionada, List<String> pagoSeleccionado) {
         this.categoriaSeleccionada = categoriaSeleccionada;
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-    public ProductoDTO(String nombreProducto, String ruta_imagen, String descripcion, int costo,
-            List<String> categoriaSeleccionada, List<String> pagoSeleccionado) {
+    public ProductoDTO(String usuario, String nombreProducto, MultipartFile ruta_imagen, String descripcion, int costo,
+            Long categoriaSeleccionada, List<String> pagoSeleccionado) {
+        this.usuario = usuario;
         this.nombreProducto = nombreProducto;
         this.ruta_imagen = ruta_imagen;
         this.descripcion = descripcion;
@@ -30,9 +34,10 @@ public class ProductoDTO {
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-    public ProductoDTO(Long id, String nombreProducto, String ruta_imagen, String descripcion, int costo,
-            List<String> categoriaSeleccionada, List<String> pagoSeleccionado) {
+    public ProductoDTO(Long id, String usuario, String nombreProducto, MultipartFile ruta_imagen, String descripcion,
+            int costo, Long categoriaSeleccionada, List<String> pagoSeleccionado) {
         this.id = id;
+        this.usuario = usuario;
         this.nombreProducto = nombreProducto;
         this.ruta_imagen = ruta_imagen;
         this.descripcion = descripcion;
@@ -53,12 +58,7 @@ public class ProductoDTO {
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
     }
-    public String getRuta_imagen() {
-        return ruta_imagen;
-    }
-    public void setRuta_imagen(String ruta_imagen) {
-        this.ruta_imagen = ruta_imagen;
-    }
+   
     public String getDescripcion() {
         return descripcion;
     }
@@ -71,10 +71,10 @@ public class ProductoDTO {
     public void setCosto(int costo) {
         this.costo = costo;
     }
-    public List<String> getCategoriaSeleccionada() {
+    public Long getCategoriaSeleccionada() {
         return categoriaSeleccionada;
     }
-    public void setCategoriaSeleccionada(List<String> categoriaSeleccionada) {
+    public void setCategoriaSeleccionada(Long categoriaSeleccionada) {
         this.categoriaSeleccionada = categoriaSeleccionada;
     }
     public List<String> getPagoSeleccionado() {
@@ -84,6 +84,20 @@ public class ProductoDTO {
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-        
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public MultipartFile getRuta_imagen() {
+        return ruta_imagen;
+    }
+
+    public void setRuta_imagen(MultipartFile ruta_imagen) {
+        this.ruta_imagen = ruta_imagen;
+    }
 
 }

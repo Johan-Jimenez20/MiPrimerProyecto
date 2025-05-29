@@ -37,6 +37,10 @@ public class Producto {
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
+
     @ManyToMany (fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinTable (
         name = "producto_pagos",
@@ -50,23 +54,25 @@ public class Producto {
     }
 
     public Producto(Long id, String nombreProducto, String rutaImagen, String descripcion, int costo,
-            Categoria categoria, Set<Pagos> pagos) {
+            Categoria categoria, Usuario usuario, Set<Pagos> pagos) {
         this.id = id;
         this.nombreProducto = nombreProducto;
         this.rutaImagen = rutaImagen;
         this.descripcion = descripcion;
         this.costo = costo;
         this.categoria = categoria;
+        this.usuario = usuario;
         this.pagos = pagos;
     }
 
     public Producto(String nombreProducto, String rutaImagen, String descripcion, int costo, Categoria categoria,
-            Set<Pagos> pagos) {
+            Usuario usuario, Set<Pagos> pagos) {
         this.nombreProducto = nombreProducto;
         this.rutaImagen = rutaImagen;
         this.descripcion = descripcion;
         this.costo = costo;
         this.categoria = categoria;
+        this.usuario = usuario;
         this.pagos = pagos;
     }
 
@@ -127,4 +133,13 @@ public class Producto {
         this.pagos = pagos;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    
 }

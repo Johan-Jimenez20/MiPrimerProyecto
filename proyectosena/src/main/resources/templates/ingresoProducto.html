@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +7,54 @@
     <title>Mi primer proyecto</title>
 </head>
 <body>
-<div class="hp3">
-    <h3 class="proyecto3">My proyect</h3>
-    <h1 class="registro3" > Registro artículo </h1>
-    <img class="img3" src="/Imagenes/imagen3.png" alt="">
-</div>
-<form action="">
-    <div>
+    <div class="hp3">
+        <h3 class="proyecto3">My proyect</h3>
+        <h1 class="registro3" > Registro artículo </h1>
+        <img class="img3" src="/Imagenes/imagen3.png" alt="">
+    </div>
+    <div class="divGeneral" > 
+        <a class="aGeneral" th:href="@{/}">Regresar</a>
+        <a class="aGeneral" th:href="@{/logout}" >Cerrar sesión</a>
+    </div>
+<div class="divAjustes">
+<div>
+    <form th:action="@{/producto/guardar}" method="post" enctype="multipart/form-data" th:object="${productoDTO}">
     <h2 class="title1" >Ingrese los datos del producto a vender</h2>   
     <form action="" class="form2" >
         <p><label for=""> Nombre (Producto) </label></p>
         <input type="text" placeholder="Ingrese el nombre del producto">
         <p><label for="">Categoria</label></p>
-        <select name="" id="">
-            <ul>
-                <li>Hogar</li>
-                <li>Ropa y accesorios</li>
-                <li>Tecnología</li>
-                <li>Deporte</li>
-                <li>Juguetes</li>
-            </ul>
+        <select name="" id="" required>
+                <Option disabled selected>Seleccionar...</Option>
+                <option th:each="cat: ${categoria}"
+                th:value="${cat.id}"
+                th:text="${cat.nombreCategoria}"></option>
         </select>
         <p><label for=""> Fotografia </label></p>
-        <input type="file" class="btn3" > <br> <label for=""> PNG, JPG </label>
+        <button class="btn" ><label for="fotos"> Subir <input type="file" class="btnFile" id="fotos" name="archivoImagen" accept="imagen/*" required ></label></button><label for=""> PNG, JPG </label>
         <p><label for=""> Descripción del producto </label></p>
-        <p><textarea name="" id="" placeholder="Ingrese todos los datos de especificación del producto especificando los tiempo de entrega"></textarea></p>
-        <p><label for=""> Costo del producto </label></p>
-        <input type="text" value="$" class="input2" disabled > <input type="text" class="inputp3" > <input type="text" value="COP" class="input2" disabled>
-        <p class="centrar">
-        </p>
+        <p><textarea name="" id="" placeholder="Ingrese todos los datos de especificación del producto especificando los tiempo de entrega" required minlength="70"></textarea></p>
     </form>
     </div>
     <div>
-        <div class="hp4">
-            <h2 class="pagop4" >Medios de pago</h2>
-            <img class="img4" src="/Imagenes/imagen4.png" alt="">
-        </div>
         <form action="" class="form3" >
+            
             <p><label for=""> Tipos de pago </label></p>
-            <button type="button" class="btn6" > TC </button><button type="button" class="btn6"> TD </button><button type="button" class="btn6" > CE </button>
+            <div class="divPagos">
+            <input type="checkbox" class="inputPagos"> TC
+            <input type="checkbox" class="inputPagos"> TD
+            <input type="checkbox" class="inputPagos"> CE
+            </div>
+            <p><label for="" class="otros1" > Confirme todos los que apliquen de la siguiente manera, TC: Tarjeta de credito, TD: Tarjeta debito, CE: Contra entrega </label></p>
+            <p><label for=""> Costo del producto </label></p>
+            <input type="text" value="$" class="input2" disabled > <input type="text" class="inputp3" > <input type="text" value="COP" class="input2" disabled> 
         </form>
+            <p class="centrar1">
+                <button type="button" class="btn5" > Finalizar </button>
+            </p>
+    </form>
     </div>
-        <button type="button" class="btn5" > Finalizar </button>
-</form>
+</div>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 
     <div class="divfooter" >

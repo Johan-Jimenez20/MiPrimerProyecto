@@ -10,5 +10,4 @@ public interface IusuarioRepo extends JpaRepository<Usuario, Long> {
     public Usuario findByCorreo (String correo);
 }
 
-
   

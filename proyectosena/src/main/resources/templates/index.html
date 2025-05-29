@@ -99,7 +99,7 @@
         </script>    
     </div>
 </body>
-    <!-- ROLE VENDEDOR  -->
+    <!-- ROLE VENDEDOR   -->
 <body>
     <div sec:authorize="hasRole('VENDEDOR') and !hasRole('COMPRADOR')">
         <header class="headerIndex">  
@@ -117,7 +117,7 @@
                 <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
                     <ul>
                         <li><a th:href="@{/}"> Mis ventas </a></li>
-                        <li><a > Agregar producto </a></li>
+                        <li><a th:href="@{/producto/nuevo}"> Agregar producto </a></li>
                         <li><a > Mis productos </a></li>
                         <li><a > ¿Quieres comprar? </a></li>
                     </ul>      
@@ -201,8 +201,6 @@
             </div>
             <div class="divIndex2" > 
                 <a th:href="@{/logout}" >Cerrar sesión</a>
-                <!-- <a class="aIndex2" href="/html/pantalla2.html"> Iniciar sesión </a>
-                <a class="aIndex2" href="/html/pantalla1.html"> Registrarse </a> -->
             </div>
             </header>
     <div class="container"> 
@@ -213,7 +211,7 @@
                         <li><a > Productos </a></li>
                         <li><a > Carrito de compras </a></li>
                         <li><a th:href="@{/}"> Mis ventas </a></li>
-                        <li><a > Agregar producto </a></li>
+                        <li><a th:href="@{/producto/nuevo}"> Agregar producto </a></li>
                         <li><a > Mis productos </a></li>
                     </ul>      
                 </div>  
