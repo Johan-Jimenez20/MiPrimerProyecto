@@ -317,9 +317,8 @@ a {
 }
 
 .form2 {
-    height: 392px;
-    width: 385px;   
-    margin: 10%;
+    height: 600px;
+    width: 450px;   
 }
 
 .title1 {
@@ -428,14 +427,19 @@ textarea {
 
 .divPagos {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 25px;
 }
 
 .inputPagos {
     width: 20px;
     margin: 10px;
+}
+
+.tiposBold {
+    text-align: center;
+    font-weight: bold;
 }
 
 .btn6 {

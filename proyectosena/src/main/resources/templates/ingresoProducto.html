@@ -10,50 +10,58 @@
     <div class="hp3">
         <h3 class="proyecto3">My proyect</h3>
         <h1 class="registro3" > Registro artículo </h1>
-        <img class="img3" src="/Imagenes/imagen3.png" alt="">
     </div>
     <div class="divGeneral" > 
         <a class="aGeneral" th:href="@{/}">Regresar</a>
         <a class="aGeneral" th:href="@{/logout}" >Cerrar sesión</a>
     </div>
-<div class="divAjustes">
-<div>
-    <form th:action="@{/producto/guardar}" method="post" enctype="multipart/form-data" th:object="${productoDTO}">
+    <div class="anchoAlerta" >
+        <div th:if="${param.exito}">
+            <div class="alerta">
+                Se ha guardado el producto exitosamente
+            </div>
+        </div> 
+    </div>  
+<form th:action="@{/producto/guardar}" method="post" enctype="multipart/form-data" th:object="${productoDTO}" class="form2">
     <h2 class="title1" >Ingrese los datos del producto a vender</h2>   
-    <form action="" class="form2" >
+    <div>
         <p><label for=""> Nombre (Producto) </label></p>
-        <input type="text" placeholder="Ingrese el nombre del producto">
-        <p><label for="">Categoria</label></p>
-        <select name="" id="" required>
-                <Option disabled selected>Seleccionar...</Option>
-                <option th:each="cat: ${categoria}"
+        <input th:field="*{nombreProducto}" maxlength="100" type="text" placeholder="Ingrese el nombre del producto">
+        <p><label>Categoria</label></p>
+        <select th:field="*{categoria_id}" required>
+            <option value="" disabled selected>Seleccionar..</option>
+            <option 
+                th:each="cat : ${categoria}" 
                 th:value="${cat.id}"
-                th:text="${cat.nombreCategoria}"></option>
+                th:text="${cat.nombreCategoria}">
+            </option>
         </select>
-        <p><label for=""> Fotografia </label></p>
-        <button class="btn" ><label for="fotos"> Subir <input type="file" class="btnFile" id="fotos" name="archivoImagen" accept="imagen/*" required ></label></button><label for=""> PNG, JPG </label>
-        <p><label for=""> Descripción del producto </label></p>
-        <p><textarea name="" id="" placeholder="Ingrese todos los datos de especificación del producto especificando los tiempo de entrega" required minlength="70"></textarea></p>
-    </form>
+        <p><label> Fotografia </label></p>
+        <label class="btn" for="fotos"> Subir <input type="file" class="btnFile" id="fotos" name="imagen" accept="image/*" required ></label><label> PNG, JPG </label>
+        <p><label> Descripción del producto </label></p>
+        <p><textarea th:field="*{descripcion}" id="descripcion" placeholder="Ingrese todos los datos de especificación del producto especificando los tiempo de entrega" required minlength="70"></textarea></p>
     </div>
     <div>
-        <form action="" class="form3" >
-            
-            <p><label for=""> Tipos de pago </label></p>
-            <div class="divPagos">
-            <input type="checkbox" class="inputPagos"> TC
-            <input type="checkbox" class="inputPagos"> TD
-            <input type="checkbox" class="inputPagos"> CE
+        <div>
+            <p class="tiposBold" ><label for=""> Tipos de pago </label></p>
+            <div class="divPagos" >
+                <div class="divPagos" th:each="pago: ${pagos}">
+                    <input type="checkbox"
+                    class="inputPagos" 
+                    name="pagoSeleccionado"
+                    th:value="${pago.id}">
+                    <span th:text="${pago.nombrePagos}"></span>
+                </div>
             </div>
-            <p><label for="" class="otros1" > Confirme todos los que apliquen de la siguiente manera, TC: Tarjeta de credito, TD: Tarjeta debito, CE: Contra entrega </label></p>
-            <p><label for=""> Costo del producto </label></p>
-            <input type="text" value="$" class="input2" disabled > <input type="text" class="inputp3" > <input type="text" value="COP" class="input2" disabled> 
-        </form>
-            <p class="centrar1">
-                <button type="button" class="btn5" > Finalizar </button>
-            </p>
-    </form>
-    </div>
+            <p><label class="otros1" > Confirme todos los que apliquen de la siguiente manera, TC: Tarjeta de credito, TD: Tarjeta debito, CE: Contra entrega </label></p>
+            <p></p>
+            <p><label for="costo"> Costo del producto </label></p>
+            <input type="text" value="$" class="input2" disabled > <input th:field="*{costo}" type="text" class="inputp3" > <input type="text" value="COP" class="input2" disabled> 
+        <p class="centrar1">
+            <input type="submit" name="submit" id="" class="btn5" > 
+        </p>
+        </div> 
+</form>
 </div>
 <h3 class="mapa" >Mapa de navegación</h3>
 <footer> 

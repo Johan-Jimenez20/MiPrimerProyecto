@@ -42,7 +42,7 @@ public class ProductoController {
 
         model.addAttribute("categoria", iCategoriaRepository.findAll());
 
-        model.addAttribute("Pagos", iPagosRepository.findAll());
+        model.addAttribute("pagos", iPagosRepository.findAll());
 
         return "ingresoProducto"; 
     }
@@ -54,6 +54,6 @@ public class ProductoController {
     Principal principal) {
         Usuario usuario = iusuarioRepo.findByCorreo(principal.getName());
         productoServicioImpl.guardarProducto(productoDTO, usuario, imagen);
-        return "redirect:/";
+        return "redirect:/producto/nuevo?exito=true";
     }
 }

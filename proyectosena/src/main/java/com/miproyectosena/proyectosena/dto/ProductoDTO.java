@@ -9,40 +9,43 @@ public class ProductoDTO {
     private Long id;
     private String usuario;
     private String nombreProducto;
-    private MultipartFile ruta_imagen;
+    private MultipartFile imagen;
     private String descripcion;
     private int costo;
-    private Long categoriaSeleccionada;
+    private Long categoria_id;
     private List<String> pagoSeleccionado;
 
     public ProductoDTO() {
     }
 
-    public ProductoDTO(Long categoriaSeleccionada, List<String> pagoSeleccionado) {
-        this.categoriaSeleccionada = categoriaSeleccionada;
+    public ProductoDTO(Long categoria_id, List<String> pagoSeleccionado) {
+        this.categoria_id = categoria_id;
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-    public ProductoDTO(String usuario, String nombreProducto, MultipartFile ruta_imagen, String descripcion, int costo,
-            Long categoriaSeleccionada, List<String> pagoSeleccionado) {
+    public ProductoDTO(String usuario, String nombreProducto, MultipartFile imagen, String descripcion, int costo,
+            Long categoria_id, List<String> pagoSeleccionado) {
         this.usuario = usuario;
         this.nombreProducto = nombreProducto;
-        this.ruta_imagen = ruta_imagen;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.costo = costo;
-        this.categoriaSeleccionada = categoriaSeleccionada;
+        this.categoria_id = categoria_id;
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-    public ProductoDTO(Long id, String usuario, String nombreProducto, MultipartFile ruta_imagen, String descripcion,
-            int costo, Long categoriaSeleccionada, List<String> pagoSeleccionado) {
+    
+
+
+    public ProductoDTO(Long id, String usuario, String nombreProducto, MultipartFile imagen, String descripcion,
+            int costo, Long categoria_id, List<String> pagoSeleccionado) {
         this.id = id;
         this.usuario = usuario;
         this.nombreProducto = nombreProducto;
-        this.ruta_imagen = ruta_imagen;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.costo = costo;
-        this.categoriaSeleccionada = categoriaSeleccionada;
+        this.categoria_id = categoria_id;
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
@@ -71,12 +74,7 @@ public class ProductoDTO {
     public void setCosto(int costo) {
         this.costo = costo;
     }
-    public Long getCategoriaSeleccionada() {
-        return categoriaSeleccionada;
-    }
-    public void setCategoriaSeleccionada(Long categoriaSeleccionada) {
-        this.categoriaSeleccionada = categoriaSeleccionada;
-    }
+   
     public List<String> getPagoSeleccionado() {
         return pagoSeleccionado;
     }
@@ -92,12 +90,20 @@ public class ProductoDTO {
         this.usuario = usuario;
     }
 
-    public MultipartFile getRuta_imagen() {
-        return ruta_imagen;
+    public MultipartFile getImagen() {
+        return imagen;
     }
 
-    public void setRuta_imagen(MultipartFile ruta_imagen) {
-        this.ruta_imagen = ruta_imagen;
+    public void setImagen(MultipartFile imagen) {
+        this.imagen = imagen;
+    }
+
+    public Long getCategoria_id() {
+        return categoria_id;
+    }
+
+    public void setCategoria_id(Long categoria_id) {
+        this.categoria_id = categoria_id;
     }
 
 }

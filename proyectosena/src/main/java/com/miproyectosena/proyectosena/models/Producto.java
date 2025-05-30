@@ -27,7 +27,7 @@ public class Producto {
     @Column(name = "nombreProducto")
     private String nombreProducto;
     @Column(name = "ruta_imagen")
-    private  String rutaImagen;
+    private  String imagen;
     @Column(name = "descripcion")
     private String descripcion;
     @Column(name = "costo")
@@ -53,11 +53,11 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(Long id, String nombreProducto, String rutaImagen, String descripcion, int costo,
+    public Producto(Long id, String nombreProducto, String imagen, String descripcion, int costo,
             Categoria categoria, Usuario usuario, Set<Pagos> pagos) {
         this.id = id;
         this.nombreProducto = nombreProducto;
-        this.rutaImagen = rutaImagen;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.costo = costo;
         this.categoria = categoria;
@@ -65,10 +65,10 @@ public class Producto {
         this.pagos = pagos;
     }
 
-    public Producto(String nombreProducto, String rutaImagen, String descripcion, int costo, Categoria categoria,
+    public Producto(String nombreProducto, String imagen, String descripcion, int costo, Categoria categoria,
             Usuario usuario, Set<Pagos> pagos) {
         this.nombreProducto = nombreProducto;
-        this.rutaImagen = rutaImagen;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.costo = costo;
         this.categoria = categoria;
@@ -92,12 +92,12 @@ public class Producto {
         this.nombreProducto = nombreProducto;
     }
 
-    public String getRutaImagen() {
-        return rutaImagen;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setRutaImagen(String rutaImagen) {
-        this.rutaImagen = rutaImagen;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public String getDescripcion() {

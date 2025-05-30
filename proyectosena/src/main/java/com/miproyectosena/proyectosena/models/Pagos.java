@@ -18,27 +18,32 @@ public class Pagos {
     public Pagos() {
     }
 
-    public Pagos(Long id, String nombreProducto) {
-        this.id = id;
-        this.nombrePagos = nombreProducto;
+    public Pagos(String nombrePagos) {
+        this.nombrePagos = nombrePagos;
     }
 
-    public Pagos(String nombreProducto) {
-        this.nombrePagos = nombreProducto;
+    public Pagos(Long id, String nombrePagos) {
+        this.id = id;
+        this.nombrePagos = nombrePagos;
     }
 
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNombreProducto() {
+
+    public String getNombrePagos() {
         return nombrePagos;
     }
-    public void setNombreProducto(String nombreProducto) {
-        this.nombrePagos = nombreProducto;
+
+    public void setNombrePagos(String nombrePagos) {
+        this.nombrePagos = nombrePagos;
     }
+
+    
 
     
 

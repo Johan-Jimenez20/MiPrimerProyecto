@@ -52,14 +52,14 @@ public class ProductoServicioImpl  {
                 Path ruta = Paths.get("uploads").resolve(nombreArchivo).toAbsolutePath();
                 Files.createDirectories(ruta.getParent());
                 Files.copy(imagen.getInputStream(), ruta, StandardCopyOption.REPLACE_EXISTING);
-                producto.setRutaImagen(nombreArchivo);
+                producto.setImagen(nombreArchivo);
             }
             catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        Categoria categoria = iCategoriaRepository.findById(dto.getCategoriaSeleccionada()).orElse(null);
+         Categoria categoria = iCategoriaRepository.findById(dto.getCategoria_id()).orElseThrow(() -> new IllegalArgumentException("Categoría no válida"));
         producto.setCategoria(categoria);
 
         Set<Pagos> pagos = new HashSet<>();
