@@ -43,8 +43,4 @@ public class Pagos {
         this.nombrePagos = nombrePagos;
     }
 
-    
-
-    
-
 }

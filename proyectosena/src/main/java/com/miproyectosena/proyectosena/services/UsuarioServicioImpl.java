@@ -53,7 +53,7 @@ public class UsuarioServicioImpl implements IUsuarioServicio{
         return iusuarioRepo.save(usuario);
     }
 
-@Override
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
        Usuario usuario = iusuarioRepo.findByCorreo(username);
        if (usuario == null) {

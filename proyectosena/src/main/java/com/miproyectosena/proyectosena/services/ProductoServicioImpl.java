@@ -23,6 +23,8 @@ import com.miproyectosena.proyectosena.repositories.ICategoriaRepository;
 import com.miproyectosena.proyectosena.repositories.IPagosRepository;
 import com.miproyectosena.proyectosena.repositories.IProductosRepository;
 
+import jakarta.transaction.Transactional;
+
 
 @Service
 public class ProductoServicioImpl  {
@@ -39,7 +41,8 @@ public class ProductoServicioImpl  {
         return iProductosRepository.findByUsuario(usuario);
     }
 
-    public Producto guardarProducto(ProductoDTO dto, Usuario usuario, MultipartFile imagen) {
+    @Transactional
+    public Producto guardarProducto(ProductoDTO dto, Usuario usuario, MultipartFile imagen, Long [] pagosSeleccionados) {
         Producto producto = new Producto();
         producto.setNombreProducto(dto.getNombreProducto());
         producto.setDescripcion(dto.getDescripcion());
@@ -59,16 +62,17 @@ public class ProductoServicioImpl  {
             }
         }
 
-         Categoria categoria = iCategoriaRepository.findById(dto.getCategoria_id()).orElseThrow(() -> new IllegalArgumentException("Categoría no válida"));
+        Categoria categoria = iCategoriaRepository.findById(dto.getCategoria_id()).orElseThrow(() -> new IllegalArgumentException("Categoría no válida"));
         producto.setCategoria(categoria);
 
         Set<Pagos> pagos = new HashSet<>();
-        for (String nombrePagos: dto.getPagoSeleccionado()) {
-            Pagos pago = iPagosRepository.findByNombrePagos(nombrePagos);
-            if (pago != null) {
-                pagos.add(pago);
+        if(pagosSeleccionados != null){
+            for (Long idPago : pagosSeleccionados){
+                iPagosRepository.findById(idPago).ifPresent(pagos::add);
             }
         }
+
+    producto.setPagos(pagos);
 
     return iProductosRepository.save(producto);
 
@@ -78,4 +82,19 @@ public class ProductoServicioImpl  {
         return iProductosRepository.findAll();
     
     }
+    public List<Producto> obtenerProductosPorRol(Usuario usuario) {
+    boolean esComprador = usuario.getRoles().stream()
+            .anyMatch(rol -> rol.getNombre().equalsIgnoreCase("ROLE_COMPRADOR"));
+    boolean esVendedor = usuario.getRoles().stream()
+            .anyMatch(rol -> rol.getNombre().equalsIgnoreCase("ROLE_VENDEDOR"));
+
+    if (esComprador || (esComprador && esVendedor)) {
+        return iProductosRepository.findAll(); // Ver todos
+    } else if (esVendedor) {
+        return iProductosRepository.findByUsuario(usuario); // Solo los suyos
+    }
+
+    return List.of(); 
+    }
 }
+

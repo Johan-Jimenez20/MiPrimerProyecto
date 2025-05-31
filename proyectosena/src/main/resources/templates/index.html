@@ -32,39 +32,20 @@
         <div class="main-content" id="main">
             <H1>Has ingresado como comprador</H1>
             <h2 class="h2Index"> Productos </h2>
-                <p class="pIndex2"> Categoria: Juegos </p>
-                    <div class="divIndex3">
-                        <div class="divIndex4">
-                            <img class="imgIndex3" src="/img/caja.png" alt="">
-                            <P class="pIndex"> Nombre producto </P>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
-                        </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                <div class="divIndex3">
+                    <div class="divIndex4" th:each="producto: ${productos}" >
+                        <img class="imgIndex3" src="/img/caja.png" alt="Imagen producto" th:src="@{/imagen/{nombreArchivo}(nombreArchivo=${producto.imagen})}">
+                        <P th:text="${producto.nombreProducto}" class="pIndex"> Nombre producto </P>
+                        <p th:text="${producto.descripcion}" >Descripción</p>
+                        <p class="pIndex"> 
+                            <span>Precio: </span> 
+                            <span th:text="${producto.costo} + ' COP'" ></span>
+                        </p> 
+                        <button class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </button>
                     </div>
                 </div>
-            </div>  
-        </div>    
+            </div>
+        </div>
         <h3 class="mapa" >Mapa de navegación</h3>
         <footer> 
             <div class="divfooter" >
@@ -123,41 +104,22 @@
                     </ul>      
                 </div>  
         <div class="main-content" id="main">
-            <H1>Has ingresado como Vendedor</H1>
+            <H1>Has ingresado como vendedor</H1>
             <h2 class="h2Index"> Productos </h2>
-                <p class="pIndex2"> Categoria: Juegos </p>
-                    <div class="divIndex3">
-                        <div class="divIndex4">
-                            <img class="imgIndex3" src="/img/caja.png" alt="">
-                            <P class="pIndex"> Nombre producto </P>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
-                        </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                <div class="divIndex3">
+                    <div class="divIndex4" th:each="producto: ${productos}" >
+                        <img class="imgIndex3" src="/img/caja.png" alt="Imagen producto" th:src="@{/imagen/{nombreArchivo}(nombreArchivo=${producto.imagen})}">
+                        <P th:text="${producto.nombreProducto}" class="pIndex"> Nombre producto </P>
+                        <p th:text="${producto.descripcion}" >Descripción</p>
+                        <p class="pIndex"> 
+                            <span>Precio: </span> 
+                            <span th:text="${producto.costo} + ' COP'" ></span>
+                        </p> 
+                        <button class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </button>
                     </div>
                 </div>
-            </div>  
-        </div>    
+            </div>
+        </div>
         <h3 class="mapa" >Mapa de navegación</h3>
         <footer> 
             <div class="divfooter" >
@@ -218,39 +180,20 @@
         <div class="main-content" id="main">
             <H1>Has ingresado como comprador y vendedor</H1>
             <h2 class="h2Index"> Productos </h2>
-                <p class="pIndex2"> Categoria: Juegos </p>
-                    <div class="divIndex3">
-                        <div class="divIndex4">
-                            <img class="imgIndex3" src="/img/caja.png" alt="">
-                            <P class="pIndex"> Nombre producto </P>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                            <Button id="" class="btn17" ><a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </Button>
-                        </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
-                    </div>
-                    <div class="divIndex4">
-                        <img class="imgIndex3" src="/img/caja.png" alt="">
-                        <P class="pIndex"> Nombre producto </P>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quae ipsum vero maxime quasi. Nihil cupiditate perspiciatis ab alias cum?</p>
-                        <p class="pIndex"> Precio: $$$$$ </p> 
-                        <BUtton class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </BUtton>
+                <div class="divIndex3">
+                    <div class="divIndex4" th:each="producto: ${productos}" >
+                        <img class="imgIndex3" src="/img/caja.png" alt="Imagen producto" th:src="@{/imagen/{nombreArchivo}(nombreArchivo=${producto.imagen})}">
+                        <P th:text="${producto.nombreProducto}" class="pIndex"> Nombre producto </P>
+                        <p th:text="${producto.descripcion}" >Descripción</p>
+                        <p class="pIndex"> 
+                            <span>Precio: </span> 
+                            <span th:text="${producto.costo} + ' COP'" ></span>
+                        </p> 
+                        <button class="btn17" > <a class="aP7" href="/html/pantalla7.html"> Ver mas... </a> </button>
                     </div>
                 </div>
-            </div>  
-        </div>    
+            </div>
+        </div>
         <h3 class="mapa" >Mapa de navegación</h3>
         <footer> 
             <div class="divfooter" >

@@ -47,6 +47,7 @@ public class UsuarioSeguridad {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http 
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/imagen/").permitAll()
                 .requestMatchers("/registro**", "/js/**", "/css/**", "/img/**").permitAll().anyRequest().authenticated()
             )
             .formLogin (form -> form

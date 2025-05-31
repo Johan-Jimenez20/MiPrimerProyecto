@@ -34,9 +34,6 @@ public class ProductoDTO {
         this.pagoSeleccionado = pagoSeleccionado;
     }
 
-    
-
-
     public ProductoDTO(Long id, String usuario, String nombreProducto, MultipartFile imagen, String descripcion,
             int costo, Long categoria_id, List<String> pagoSeleccionado) {
         this.id = id;
