@@ -32,15 +32,20 @@ public class LoginController {
     public String mostrarInicio(Model model, Principal principal) {
         List <Producto> productos;
 
-        if (principal == null) {
+        Usuario usuario = null;
+        if (principal != null) {
+            usuario = iusuarioRepo.findByCorreo(principal.getName());
         // Usuario no autenticado: puede ver todos
         productos = productoServicioImpl.obtenerTodosLosProductos();
+        } 
+        if (usuario == null) {
+            productos = productoServicioImpl.obtenerTodosLosProductos();
         } else {
-        Usuario usuario = iusuarioRepo.findByCorreo(principal.getName());
-        productos = productoServicioImpl.obtenerProductosPorRol(usuario);
+            productos = productoServicioImpl.obtenerProductosPorRol(usuario);
         }
 
         model.addAttribute("productos", productos);
         return "index";
+        }
     }
-}
+

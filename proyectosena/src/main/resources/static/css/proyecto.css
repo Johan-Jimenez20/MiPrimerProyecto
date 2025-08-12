@@ -901,6 +901,9 @@ ul li:hover .dropdown {
 
 .imgp7 {
     width: 450px;
+    height: 350px;
+    border-radius: 20px;
+    border: solid black;
 }
 
 .formp7 {

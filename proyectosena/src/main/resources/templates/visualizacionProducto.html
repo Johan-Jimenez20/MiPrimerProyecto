@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +7,28 @@
     <title>Mi primer proyecto</title>
 </head>
 <body>
-    <header class="headerIndex">  
-    <ul class="ul1" >
-        <li>
-        <button class="btn15"><img class="imgIndex" src="/Imagenes/icono.png" alt=""></button> 
-        <ul class="dropdown" >
-            <li><a class="aIndex" href=""> Primera Opción </a></li>
-            <li><a class="aIndex" href=""> Segunda Opción </a></li>
-            <li><a class="aIndex" href=""> Tercera Opción </a></li>
-            <li><a class="aIndex" href=""> Cuarta Opción </a></li>
-            <li><a class="aIndex" href=""> Quinta Opción </a></li>
-        </ul>
-        </li>   
-    </ul>       
+    <header class="headerIndex">       
     <div class="divIndex"> 
-        <input class="inputIndex" type="" placeholder="Buscar..."> <button class="btn16" > <img class="imgIndex2" src="/Imagenes/lupa.png""> </button>
+        <input class="inputIndex" type="" placeholder="Buscar..."> <button class="btn16" > <img class="imgIndex2" src="../img/lupa.png"> </button>
     </div>
     <div class="divIndex2" > 
-        <a class="aIndex2" href="pantalla2.html"> Iniciar sesión </a>
-        <a class="aIndex2" href="pantalla1.html"> Registrarse </a>
+        <a th:href="@{/logout}" >Cerrar sesión</a>
     </div>
     </header>
 
 <form action="" class="formp7">
-    <button class="btn18" > <a class="aP7" href="/index.html"> Regresar </a></button>
+    <button class="btn18" > <a class="aP7" th:href="@{/}"> Regresar </a></button>
 <div class="divp7">
     <div>
-        <img class="imgp7" src="/Imagenes/camara.png" alt="">
+        <img class="imgp7" src="/img/caja.png" alt="Imagen producto" th:src="@{/imagen/{nombreArchivo}(nombreArchivo=${producto.imagen})}">
     </div>
     <div class="desP7" >
-        <h2> Nombre de producto </h2>
-        <p class="pp7" >Precio</p>
-        <p class="pp7" >$$$$</p>
-        <label for="">Descripción </label>
-        <p class="pDesP7" > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit a sint hic enim consequatur quibusdam ipsa consectetur dolorem placeat quia! </p>
+        <h1 th:text="${producto.nombreProducto}"> Nombre producto </h1>
+        <p class="pp7" >
+            <span>Precio: </span> 
+            <span th:text="${producto.costo} + ' COP'" ></span>
+        </p>
+        <p th:text="${producto.descripcion}" >Descripción</p>
         <label for="">Cantidad</label> <input class="inputP7" type="number"> <br> 
         <div class="btnDiv">
             <button class="btn19" > Agregar al carrito </button>

@@ -40,6 +40,11 @@ public class ProductoServicioImpl  {
     public List<Producto> getProductosDelUsuario(Usuario usuario) {
         return iProductosRepository.findByUsuario(usuario);
     }
+    
+    public Producto obtenerProductoPorId(Long id) {
+        return iProductosRepository.findById(id).orElse(null);
+    }
+
 
     @Transactional
     public Producto guardarProducto(ProductoDTO dto, Usuario usuario, MultipartFile imagen, Long [] pagosSeleccionados) {
